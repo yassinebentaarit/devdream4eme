@@ -3,7 +3,7 @@ package tn.esprit.devdream.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.devdream.entities.Depot;
-import tn.esprit.devdream.service.IDepotService;
+import tn.esprit.devdream.service.interfaces.IDepotService;
 
 import java.util.List;
 

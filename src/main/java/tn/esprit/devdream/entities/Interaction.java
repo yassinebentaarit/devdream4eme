@@ -18,15 +18,16 @@ import java.io.Serializable;
 public class Interaction implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id_interaction")
-    private Long Id_interaction;
+    @Column(name="id_interaction")
+    private Long id_interaction;
 
     @Enumerated(EnumType.STRING)
     private Type_inter interaction;
-
+    @Enumerated(EnumType.STRING)
+    private Type_interaction type_interaction;
     private Post post;
     @ManyToOne
-    @JoinColumn(name = "Id_Post", insertable = false, updatable = false)
+    @JoinColumn(name = "id_Post", insertable = false, updatable = false)
     public Post getPost(){
 
         return post;
@@ -37,7 +38,8 @@ public class Interaction implements Serializable {
         this.post = post;
     }
 
-
+    @ManyToOne
+    @JoinColumn(name = "id")
     private User user;
     @ManyToOne
     @JoinColumn(name = "id", insertable = false, updatable = false)

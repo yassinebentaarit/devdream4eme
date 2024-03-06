@@ -30,11 +30,13 @@ public class Formation implements Serializable {
     private Date date_debut_formation;
     @Temporal(TemporalType.DATE)
     private Date date_fin_formation;
-
+    private int nombreJadore;
+    private String mot_cle;
     private Boolean disponiblite;
 
     @ManyToOne
-    private User Createur_formation; //chkoun 3mal el formation
+    @JoinColumn(name = "formation_id")
+    private User createur_formation; //chkoun 3mal el formation
 
     @ManyToMany
     private List<User> participantsList; //chkoun la3bed li bech ta7dher lel formation

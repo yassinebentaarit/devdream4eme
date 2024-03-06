@@ -8,9 +8,9 @@ import tn.esprit.devdream.RessourceNotFound.NotFoundException;
 import tn.esprit.devdream.entities.Tache;
 import tn.esprit.devdream.entities.Tache_status;
 import tn.esprit.devdream.entities.User;
-import tn.esprit.devdream.service.ITacheService;
-import tn.esprit.devdream.service.IUserService;
-import tn.esprit.devdream.service.MailService;
+import tn.esprit.devdream.service.interfaces.ITacheService;
+import tn.esprit.devdream.service.interfaces.IUserService;
+import tn.esprit.devdream.service.classes.MailService;
 
 import java.util.List;
 

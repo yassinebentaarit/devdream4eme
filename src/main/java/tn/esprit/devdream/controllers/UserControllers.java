@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.devdream.entities.User;
-import tn.esprit.devdream.service.IUserService;
-import tn.esprit.devdream.service.UserServices;
+import tn.esprit.devdream.service.interfaces.IUserService;
+import tn.esprit.devdream.service.classes.UserServices;
 
 import java.util.List;
 

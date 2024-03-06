@@ -1,5 +1,6 @@
 package tn.esprit.devdream.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,10 +21,12 @@ public class CommentairePost implements Serializable {
     @Column(name="id_idcom")
     private Long id_idcom;
     private String contenu;
-
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "id_Post") // Assurez-vous que ce nom de colonne correspond à la clé étrangère dans la base de données
     private Post post;
     @ManyToOne
-    @JoinColumn(name = "Id_Post", insertable = false, updatable = false)
+    @JoinColumn(name = "id_Post", insertable = false, updatable = false)
     public Post getPost(){
 
         return post;
@@ -37,6 +40,7 @@ public class CommentairePost implements Serializable {
 
     private User user;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "id", insertable = false, updatable = false)
     public User getUser(){
 

@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import tn.esprit.devdream.entities.Application;
 import tn.esprit.devdream.entities.Depot;
 import tn.esprit.devdream.repositories.ApplicationRepository;
-import tn.esprit.devdream.service.IApplicationService;
+import tn.esprit.devdream.service.interfaces.IApplicationService;
 
 import java.io.File;
 import java.io.IOException;

@@ -3,7 +3,7 @@ package tn.esprit.devdream.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.devdream.entities.Etiquette;
-import tn.esprit.devdream.service.IEtiquetteService;
+import tn.esprit.devdream.service.interfaces.IEtiquetteService;
 
 import java.util.List;
 

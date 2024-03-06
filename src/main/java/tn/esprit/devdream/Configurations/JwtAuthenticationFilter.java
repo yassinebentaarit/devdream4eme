@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import tn.esprit.devdream.service.JwtService;
+import tn.esprit.devdream.service.classes.JwtService;
 
 import java.io.IOException;
 

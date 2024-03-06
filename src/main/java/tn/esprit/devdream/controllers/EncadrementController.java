@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.devdream.entities.User;
-import tn.esprit.devdream.service.IEncadrementService;
+import tn.esprit.devdream.service.interfaces.IEncadrementService;
 
 import java.util.List;
 import java.util.Map;

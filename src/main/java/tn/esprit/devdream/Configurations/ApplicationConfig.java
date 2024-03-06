@@ -20,11 +20,11 @@ import tn.esprit.devdream.repositories.UserRepository;
 public class ApplicationConfig {
 
 
-    private final UserRepository repository;
+    UserRepository userRepository;
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return username -> (UserDetails) repository.findByEmail(username)
+        return username -> (UserDetails) userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
     @Bean

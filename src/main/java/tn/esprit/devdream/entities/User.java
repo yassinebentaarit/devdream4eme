@@ -74,6 +74,7 @@ public class User implements UserDetails
     public void setCommentairePostList(List<CommentairePost> commentairePostList){
         this.commentairePostList=commentairePostList;
     }
+
     private List<Evaluation> evaluations;
     @OneToMany(mappedBy = "user")
     public List<Evaluation> getEvaluations(){
@@ -86,7 +87,7 @@ public class User implements UserDetails
     private List<Event> eventList;
     @ManyToMany(mappedBy = "participantslist")
     private List<Event> participantsEventList;
-    @OneToMany(mappedBy = "Createur_formation")
+    @OneToMany(mappedBy = "createur_formation")
     private List<Formation> formationscreee; //chkoun 3mal el formation
     @ManyToMany(mappedBy = "participantsList")
     private List<Formation> participations_formations; //lista mta3 anehom les formation elli el user hatha charek fehom
@@ -107,6 +108,8 @@ public class User implements UserDetails
 
     @OneToMany(mappedBy = "maitrestage")
     private  List<Stage> stageList;
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

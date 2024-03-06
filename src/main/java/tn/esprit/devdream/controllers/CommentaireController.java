@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.devdream.entities.Commentaire;
-import tn.esprit.devdream.service.ICommentaireService;
+import tn.esprit.devdream.service.interfaces.ICommentaireService;
 
 import java.util.List;
 

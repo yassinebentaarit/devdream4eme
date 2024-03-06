@@ -1,6 +1,6 @@
 package tn.esprit.devdream.controllers;
 
-import tn.esprit.devdream.service.AuthenticationService;
+import tn.esprit.devdream.service.classes.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
