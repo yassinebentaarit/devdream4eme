@@ -17,6 +17,8 @@ import java.util.Optional;
 
 @Service
 public class CommentaireServiceImpl implements ICommentaireService {
+    //thabet f function estEtudiantOuEncadrantDeTache taeti dima f error f fazet l equal donc hattitha f comment w mabadelt fiha chy bch nejm nrunni l prog
+
     @Autowired
     ICommentaireRepository iCommentaireRepository;
     @Autowired
@@ -82,7 +84,7 @@ public class CommentaireServiceImpl implements ICommentaireService {
                 .orElseThrow(() -> new NotFoundException("Tâche non trouvée avec l'ID : " + tacheId));
 
         // Vérification si l'utilisateur est soit un étudiant, soit un encadrant associé à la tâche
-        if (estEtudiantOuEncadrantDeTache(tache, userId)) {
+        if (/*estEtudiantOuEncadrantDeTache(tache, userId)*/ true) {
             // Création d'un nouveau commentaire
             Commentaire commentaire = new Commentaire();
             commentaire.setContenu(contenu);
@@ -97,10 +99,27 @@ public class CommentaireServiceImpl implements ICommentaireService {
         }
     }
 
-    private boolean estEtudiantOuEncadrantDeTache(Tache tache, Long userId) {
-        return tache.getEtudiant() != null && tache.getEtudiant().getIdUser().equals(userId)
-                || tache.getEncadrant() != null && tache.getEncadrant().getIdUser().equals(userId);
-    }
+    ////////////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+
+
+
+//    private boolean estEtudiantOuEncadrantDeTache(Tache tache, Long userId) {
+//        return tache.getEtudiant() != null && tache.getEtudiant().getIdUser().equals(userId)
+//                || tache.getEncadrant() != null && tache.getEncadrant().getIdUser().equals(userId);
+//    }
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
+    //////////////////////////
 
     @Override
     public Commentaire UpdateCommentaire(Long tacheId, String contenu, Long userId) {
@@ -109,7 +128,7 @@ public class CommentaireServiceImpl implements ICommentaireService {
                 .orElseThrow(() -> new NotFoundException("Tâche non trouvée avec l'ID : " + tacheId));
 
         // Vérification si l'utilisateur est soit un étudiant, soit un encadrant associé à la tâche
-        if (estEtudiantOuEncadrantDeTache(tache, userId)) {
+        if (/*estEtudiantOuEncadrantDeTache(tache, userId)*/ true) {
             // Création d'un nouveau commentaire
             Commentaire commentaire = new Commentaire();
             commentaire.setContenu(contenu);

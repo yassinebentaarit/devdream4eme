@@ -19,7 +19,7 @@ public interface ITacheRepository extends JpaRepository<Tache, Long> {
 
     @Query("SELECT COUNT(t) FROM Tache t WHERE t.Status = :status")
     Long countByStatusEquals(@Param("status") Tache_status tacheStatus);
-    @Query("select t from Tache t join User u on t.etudiant.id=:idEtudiant")
+    @Query("select t from Tache t join User u on t.etudiant.idUser=:idEtudiant")
     public List<Tache> findTachesByEtudiant_Id(@Param("idEtudiant") long idEtudiant);
 
    // @Query("SELECT DISTINCT t FROM Tache t JOIN t.etudiant e WHERE e.identifiant = :idt")
