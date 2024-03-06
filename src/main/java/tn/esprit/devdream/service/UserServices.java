@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.devdream.entities.User;
 import tn.esprit.devdream.repositories.UserRepository;
+import tn.esprit.devdream.repositories.IUserRepository;
+
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
 public class UserServices implements IUserService {
     @Autowired
     UserRepository userrepo ;
+    @Autowired
+    IUserRepository iUserRepository;
 
 
 
@@ -38,6 +42,10 @@ public class UserServices implements IUserService {
     @Override
     public User modifyUser(User user) {
         return  userrepo.save(user);
+    }
+    @Override
+    public User findById(Long id) {
+        return iUserRepository.findById(id).orElse(null);
     }
 }
 

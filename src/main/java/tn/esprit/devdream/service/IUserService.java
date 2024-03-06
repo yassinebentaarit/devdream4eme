@@ -12,4 +12,5 @@ public interface IUserService {
     public User addUser(User user );
     public void removeUser(Long iduser);
     public User modifyUser(User user);
+    public User findById(Long id);
 }
